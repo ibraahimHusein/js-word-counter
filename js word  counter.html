@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>World Counter</title>
+    </head>
+    <body>
+        <h2>Word Counter</h2>
+        <textarea id="text" rows="6" cols="40" placeholder="ku qoro fikirkaaga Halkaan...."></textarea> <br> <br>
+        <button onclick="countwords()">CountWord</button>
+        <h3 id="result"></h3>
+        <script>
+            function countwords() {
+                const text = document.getElementById("text").value;
+                const words = text.trim().split(/ s+/);
+                const wordCount = text.trim() === "" ? 0 : words.length;
+                document.getElementById("result").innerHTML = `word Count: ${wordCount}`;
+
+
+            }
+        </script>
+    </body>
+</html>
